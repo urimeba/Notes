@@ -1,0 +1,74 @@
+{% block content %}
+    {% include 'navbar.html' %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <body>
+
+    <div class="container-fluid" id="contenedor-registro-padre">
+        <h1 class="display-1">Regístrate</h1>
+
+        <!-- CONTENEDOR DEL FORMULARIO DE INICIO DE SESION -->
+        <div class="container" id="contenedor-registro">
+            <form action="" method="POST">
+                    {% csrf_token %}
+                        <!-- PEDIR USUARIO, PASSWORD, NOMBRE, APELLIDO, EMAIL -->
+                    <div class="form-group row">
+                        <label for="usuario" class="col-sm-4 col-form-label">Usuario</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="usuario" placeholder="Nombre de usuario" oninput="espacios(this)" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="contraseña" class="col-sm-4 col-form-label">Contraseña</label>
+                        <div class="col-sm-8">
+                           <input type="password" class="form-control" id="contraseña" minlength="6" maxlength="128" placeholder="Contraseña" oninput="espacios(this)" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="contraseña_dos" class="col-sm-4 col-form-label">Repite Contraseña</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="contraseña_dos" minlength="6" maxlength="128" placeholder="Ingresa nuevamente tu contraseña" oninput="espacios(this)" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="nombre" class="col-sm-4 col-form-label">Nombre</label>
+                        <div class="col-sm-8">
+                           <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="apellido" class="col-sm-4 col-form-label">Apellido</label>
+                        <div class="col-sm-8">
+                           <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="correo" class="col-sm-4 col-form-label">Correo</label>
+                        <div class="col-sm-8">
+                           <input type="email" class="form-control" id="correo" placeholder="Correo" oninput="espacios(this)" required>
+                        </div>
+                    </div>
+
+                    <!-- <button type="submit" id="botonRegistrar" class="btn btn-success" onclick="registrarUsuario()">Registrame</button> -->
+
+                    <input type="button" id="botonRegistrar" class="btn btn-success" value="Registrame" onclick="registrarUsuario()">
+                    
+
+
+            </form>
+        </div>
+    </div>
+    </body>
+    </html>
+{% endblock %}

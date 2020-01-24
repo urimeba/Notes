@@ -1,0 +1,79 @@
+{% load staticfiles  %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/funciones.js' %}"></script>
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/casco.png' %}"/>
+
+    <title>Notas de {{user.username}}</title>
+</head>
+<body onload="obtenerNotas(null), botonActivo()">
+
+        {% block content %}
+    
+        <!-- NAVBAR  -->
+        <div class="container-fluid " id="navbar_notes">
+          <div class="container" id="contenedor-info">
+              <img src="{% static 'img/casco.png' %}" id="logo-facultad">
+              <h4 id="titulo">Notes UAQ</h4>
+          </div>
+
+          <div class="container w-25">
+            <h2>Notas de {{user.first_name}}</h2>
+          </div>
+
+          <div class="container" id="contenedor-perfil">
+              <img src="{% static 'img/foto-perfil.png' %}" id="foto-perfil" onclick="mostrarMenuUsuario()">
+          </div>
+        </div>
+
+        <!-- MENU LATERAL -->
+        <div class="container-fluid" id="menu-lateral">
+          <div class="container p-0 d-flex flex-row justify-content-center align-items-baseline">
+              <p>C A T E G O R I A S</p>
+              {% csrf_token %}
+              <input class="btn btn-sm btn-success" id="botonAñadirCategoria" type="button" value="Añadir" onclick="añadirCategoria()">
+          </div>
+          
+          <!-- IMPRIMIENDO CADA CATEGORIA -->
+          <div class="categoria p-1 active" onclick="obtenerNotas(null)">
+          <a onclick="obtenerNotas(null)" href="javascript:void(0);">Todas</a>
+          </div>
+
+          {% for categoria in categorias %}
+            <div class="categoria container d-flex flex-row justify-content-between align-items-center" id="{{categoria.id}}"  onclick="obtenerNotas({{categoria.id}})">
+            <a href="javascript:void(0);">{{ categoria.titulo }}</a>
+            <input type="button" class="btn btn-sm btn-danger botonEliminarCategoria" value="Eliminar" onclick="eliminarCategoria({{categoria.id}},'{{categoria.titulo}}')">
+
+            </div>
+          {% endfor %}
+
+        </div>
+
+        <div class="container-fluid bg-light " id="contenedor-input-nota">
+
+          <div class="container" id="formulario-nota">
+              <input type="text" class="form-control form-control-sm" placeholder="Añade una nota, {{user.first_name}}" id="input-descripcion-nota" autocomplete="off">
+          </div>
+          
+          
+          
+        </div>
+
+
+        <!-- CONTENEDOR DE LAS NOTAS -->
+        <div class="container-fluid bg-light" id="contenedor-notas">
+        </div>
+        {% endblock %}
+        
+    
+</body>
+</html>

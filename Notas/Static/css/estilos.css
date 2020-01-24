@@ -1,0 +1,721 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html
+{
+    height: 100vh;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+body
+{
+    height: 100%;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+a, a:active, a:hover, a:visited, a:link
+{
+    text-decoration: none !important;
+    color: white;
+}
+
+#menu-lateral::-webkit-scrollbar 
+{
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+#menu-lateral::-webkit-scrollbar-thumb 
+{
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+#menu-lateral::-webkit-scrollbar-thumb:hover 
+{
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+#menu-lateral::-webkit-scrollbar-thumb:active 
+{
+    background-color: #999999;
+}
+
+#menu-lateral::-webkit-scrollbar-track 
+{
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+#menu-lateral::-webkit-scrollbar-track:hover,
+#menu-lateral::-webkit-scrollbar-track:active 
+{
+  background: #d4d4d4;
+}
+
+/* SCROLLBAR DE NOTAS */
+#contenedor-notas::-webkit-scrollbar 
+{
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+#contenedor-notas::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+#contenedor-notas::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+#contenedor-notas::-webkit-scrollbar-thumb:active 
+{
+    background-color: #999999;
+}
+
+#contenedor-notas::-webkit-scrollbar-track 
+{
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+#contenedor-notas::-webkit-scrollbar-track:hover,
+#contenedor-notas::-webkit-scrollbar-track:active 
+{
+  background: #d4d4d4;
+}
+
+
+.contenedor-nota::-webkit-scrollbar 
+{
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.contenedor-nota::-webkit-scrollbar-thumb 
+{
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.contenedor-nota::-webkit-scrollbar-thumb:hover 
+{
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.contenedor-nota::-webkit-scrollbar-thumb:active 
+{
+    background-color: #999999;
+}
+
+.contenedor-nota::-webkit-scrollbar-track 
+{
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+.contenedor-nota::-webkit-scrollbar-track:hover,
+.contenedor-nota::-webkit-scrollbar-track:active 
+{
+  background: #d4d4d4;
+}
+
+
+
+
+.categoria
+{
+    /* background: black; */
+    
+    border-radius: 8px;
+    height: 8%;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    cursor: pointer;
+
+}
+
+.categoria:hover
+{
+    background: rgb(208, 211, 214);
+}
+
+.categoria:hover > a
+{
+    color: black;
+}
+
+.active
+{
+    background: rgb(208, 211, 214);
+}
+.active > a
+{
+    color: black;
+}
+
+/* ESTILOS DE LA PAGINA INICIAL DE PRESENTACION */
+#logo-facultad1
+{
+    width: 35px;
+    height: auto;
+    /* filter: invert(100%); */
+    float: left;
+    margin-right: 5px;
+    
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+    filter: FlipH;
+}
+
+#contenedor-sesion-padre
+{
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#contenedor-sesion
+{
+    width: 30%;
+    height: 30%;
+    /* background: red; */
+
+}
+
+#contenedor-registro-padre
+{
+    width: 100%;
+    height: 90%;
+    float: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor-registro
+{
+    width: 30%;
+    height: 70%;
+    float: left;
+    
+    /* background: red; */
+
+}
+
+#botonRegistrar
+{
+    margin-left: 35%;
+}
+
+
+.helptext
+{
+    /* visibility: hidden; */
+    display: none;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+}
+
+
+
+
+
+
+
+
+/* ESTILOS DE LA NAVBAR DE LAS NOTAS */
+ /* ESTILOS DE LA BARRA NAVBAR SUPERIOR */
+#navbar_notes
+{
+    width: 100%;
+    height: 10%;
+    /* background: black; */
+    float: left;
+
+    color: #91C6FE;
+    background: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between !important;
+    padding-left: 0px;
+
+    position: fixed;
+
+}
+
+#contenedor-info
+{
+    width: 20.2%;
+    height: 100%;
+    background: #55595C;
+    float: left;
+
+    color: black !important;
+
+
+    margin: 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#logo-facultad
+{
+    width: auto;
+    height: 80%;
+    float: left;
+    
+    /* background: red; */
+    /* filter: invert(100%); */
+}
+
+#contenedor-perfil
+{
+    height: 80%;
+    width: 4%;
+    float: left;
+
+    margin: 0px !important;
+
+    background: #DEE2E6;
+    border-radius: 60px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo
+{
+    /* background: black; */
+    margin-top: 8px;
+}
+
+#foto-perfil
+{
+    width: auto;
+    height: 80%;
+    float: left;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+    /* background: blue; */
+}
+/* TERMINAN ESTILOS DE LA BARRA NAVBAR SUPERIOR */
+
+
+
+
+
+/* EMPIEZAN ESTILOS DEL MENU-LATERAL */
+#menu-lateral
+{
+    width: 20%;
+    height: 90%;
+    background: #55595C;
+
+    top: 10%;
+
+    color: white !important;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    position: fixed;
+
+    overflow: scroll;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+#botonAñadirCategoria
+{
+    height: 20px !important;
+    width: 20% !important;
+    font-size: 10px;
+    margin-left: 10px;
+
+}
+
+.botonEliminarCategoria
+{
+    height: 16px;
+    font-size: 10px !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+/* TERMINAN ESTILOS DEL MENU-LATERAL */
+
+/* TERMINAN ESTILOS DE NAVBAR */
+
+
+
+
+
+
+/* COMIENZAN ESTILOS DEL CONTENEDOR DE LAS NOTAS */
+#contenedor-notas   
+{
+    width: 80%;
+    height: 80%;
+    float: left;
+
+    margin-left: 20%;
+    margin-top: 8%;
+    
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    /* background: yellow; */
+
+    
+}
+
+#contenedor-input-nota
+{
+    width: 80%;
+    height: 8%;
+    float: left;
+
+    border-top: 1px solid #DEE2E6;
+
+    position: fixed;
+    left: 20%;
+    top: 10%;
+    
+    /* background: purple; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+}
+
+#formulario-nota
+{
+    width: 40%;
+    height: auto;
+    float: left;
+
+    /* background: white; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-titulo-nota, #input-descripcion-nota, #input-categoria-nota
+{
+    height: auto;
+    width: 100%;
+    float: left;
+    margin-top: 2px;
+
+    box-shadow: none;
+}
+
+#input-añadir-nota
+{
+    height: auto;
+    width: auto;
+    float: left;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contenedor-nota
+{
+    width: 30%   !important;
+    height: 250px !important;
+    float: left;
+
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 3% !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border-radius: 10px;
+
+}
+
+.contenedor-titulo
+{
+    width: 100%;
+    height: auto;
+    float: left;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.titulo
+{
+    height: auto;
+    width: 90%;
+    float: left;
+    background: none;
+    border: none;
+
+    font-weight: bold;
+}
+
+.botonColor
+{
+    height: 10px;
+    width: 8%;
+    float: left;
+
+    background: none;
+    /* border: 1px solid black; */
+    border: none;
+    background-image: url("../img/dots2.png");
+
+    background-size: 100% 100%;
+}
+
+.contenedor-colores-padre
+{
+    width: 100%;
+    height: 30px !important;
+    float: left;
+
+    padding: 0px;
+}
+
+.contenedor-colores
+{
+    width: 80% !important;
+    height: 100%;
+}
+
+
+.color
+{
+    width: calc(100% / 7) !important;
+    float: left;
+    border: 1px solid black;
+}
+
+#color-FFF2AB
+{
+    background-color: #FFF2AB;
+
+}
+#color-CBF1C4
+{
+    background-color: #CBF1C4
+}
+#color-FFCCE5
+{
+    background-color: #FFCCE5
+}
+#color-E7CFFF
+{
+    background-color: #E7CFFF
+}
+#color-CDE9FF
+{
+    background-color: #CDE9FF
+}
+#color-F9F9F9
+{
+    background-color: #F9F9F9
+}
+#color-444444
+{
+    background-color: #444444
+}
+
+
+.descripcion
+{
+    text-align: justify;
+    background: none;
+    width: 100%;
+    height: 190px;
+    border: none;
+
+    resize: none;
+
+    font-style: italic;
+}
+
+.contenedor-botones
+{
+    width: 80% !important;
+    height: 15px;
+    float: left !important;
+
+    padding: 0px !important;
+
+    /* background: blue; */
+
+    /* margin-left: 100px !important; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end !important;
+}
+
+.botonEliminarNota
+{
+    height: 15px;
+    width: 40px;
+    float: left;
+
+    font-size: 10px !important;
+
+    margin-left: 10px;
+}
+
+.botonEnviarNota
+{
+    width: 40px;
+    height: 15px;
+    float: left;
+
+    font-size: 10px !important;
+    
+}
+
+.fecha
+{
+    font-size: 10px;
+    /* width: 90%; */
+    /* height: 100% !important; */
+    float: left;
+    /* background: beige; */
+}
+
+
+
+
+/* TERMINAN ESTILOS DEL CONTENEDOR DE LAS NOTAS */
+
+#menu-usuario
+{
+    width: 120px;
+    height: 50px;
+    background: white;
+    position: fixed;
+
+    border: 1px solid #DEE2E6;
+    border-radius: 10px;
+    box-shadow: #444444;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-weight: bold;
+
+    font-size: 0.9rem;
+
+
+
+    top: 9%;
+    right: 0px;
+}
+
+#menu-usuario > a
+{
+    /* background: pink; */
+    float: left;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: black !important;
+
+}
+
+.contenedor-boton-usuario
+{
+    /* background: pink; */
+    float: left;
+    width: 90%;
+    height: 100%;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+
+}
+
+.contenedor-boton-usuario:hover
+{
+    background: #E9ECEF;
+}
